@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import LandingPage from './landingPage';
 import CalculatorPage from './calculatorPage';
 import InfoPage from './infoPage';
