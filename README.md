@@ -2,10 +2,16 @@
 
 ## Get started
 
-### `npm start`
+Git clone this repository:
 
-Runs the app in the development mode.<br>
+`git clone https://github.com/ameliejyc/tax-calculator.git`
+
+Then install dependencies:
+
+`npm i`
+
+Then calculate your income tax to your heart's content:
+
+`npm start`
+
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
