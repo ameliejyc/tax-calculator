@@ -1,12 +1,12 @@
 import React from 'react';
-import { Container, Table, Heading } from './index.styles';
-import TaxTable from './TaxTable'
-import taxInfo from '../../utils/tax-info'
+import { Container, Subheader, Table, Heading } from './index.styles';
+import TaxTable from './TaxTable';
+import taxInfo from '../../utils/tax-info';
 
 const InfoPage = () => {
   return (
     <Container>
-      <h1>Info</h1>
+      <Subheader>BREAK IT DOWN</Subheader>
       <Table>
         <tbody>
           <tr>
@@ -15,7 +15,15 @@ const InfoPage = () => {
             <Heading>Tax Rate</Heading>
           </tr>
           {taxInfo.map(({ band, taxable, rate, emoji }) => {
-            return <TaxTable key={band} band={band} rate={rate} taxable={taxable} emoji={emoji} />
+            return (
+              <TaxTable
+                key={band}
+                band={band}
+                rate={rate}
+                taxable={taxable}
+                emoji={emoji}
+              />
+            );
           })}
         </tbody>
       </Table>
