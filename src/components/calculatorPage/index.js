@@ -15,29 +15,17 @@ class CalculatorPage extends Component {
   };
 
   render() {
-    const { salary } = this.state.salary;
-
-    const handleClick = e => {
-      e.preventDefault();
-      const bracket = taxBracketCalculator(salary);
-      console.log(bracket);
-      const incomeTax = incomeTaxCalculator(salary, bracket);
-      console.log(incomeTax);
-      this.setState({ tax: incomeTax });
-    };
+    const { salary } = this.state;
 
     const taxBracketCalculator = salary => {
-      switch (salary) {
-        case salary <= 11500:
-          return 'Personal Allowance';
-        case salary <= 45000:
-          return 'Basic Rate';
-        case salary <= 150000:
-          return 'Higher Rate';
-        case salary > 150000:
-          return 'Additional Rate';
-        default:
-          return null;
+      if (salary <= 11500) {
+        return 'Personal Allowance';
+      } else if (salary <= 45000) {
+        return 'Basic Rate';
+      } else if (salary <= 150000) {
+        return 'Higher Rate';
+      } else {
+        return 'Additional Rate';
       }
     };
 
@@ -49,18 +37,25 @@ class CalculatorPage extends Component {
         'Additional Rate': 0.45
       };
       if (bracket === 'Personal Allowance') {
-        return 0;
+        return '0';
       } else if (bracket === 'Basic Rate') {
         return (salary - 11500) * taxBrackets[bracket];
       } else if (bracket === 'Higher Rate') {
         return (salary - 45000) * taxBrackets[bracket] + (45000 - 11500) * 0.2;
-      } else if (bracket === 'Additional Rate') {
+      } else {
         return (
-          (salary - 150000) * taxBrackets[bracket] +
+          (salary - 150000) * 0.45 +
           (150000 - 45000) * 0.4 +
           (45000 - 11500) * 0.2
         );
       }
+    };
+
+    const handleClick = e => {
+      e.preventDefault();
+      const bracket = taxBracketCalculator(salary);
+      const incomeTax = incomeTaxCalculator(salary, bracket);
+      this.setState({ tax: incomeTax });
     };
 
     return (
@@ -76,7 +71,7 @@ class CalculatorPage extends Component {
           <p>a year</p>
         </InputSection>
         <button onClick={handleClick}>Calculate income tax</button>
-        {this.state.tax ? <p>You pay {this.state.tax} a year in tax</p> : null}
+        {this.state.tax ? <p>You pay £{this.state.tax} a year in tax</p> : null}
       </Container>
     );
   }
