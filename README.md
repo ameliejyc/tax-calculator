@@ -1,10 +1,14 @@
-# Tax Calculator
+# Income Tax Calculator
 
 ## Get started
 
-Git clone this repository:
+Open your terminal and git clone this repository:
 
 `git clone https://github.com/ameliejyc/tax-calculator.git`
+
+Move into the newly installed folder:
+
+`cd tax-calculator`
 
 Then install dependencies:
 

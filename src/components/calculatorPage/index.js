@@ -7,6 +7,7 @@ import {
   InputSection,
   Input,
   Button,
+  Breakdown,
   Chevron,
 } from './index.styles';
 
@@ -69,7 +70,7 @@ class CalculatorPage extends Component {
 
   render() {
     return (
-      <Container>
+      <Container id="calculator">
         <Form onSubmit={this.handleSubmit}>
           <InputSection>
             <Paragraph>I earn £</Paragraph>
@@ -86,16 +87,21 @@ class CalculatorPage extends Component {
           <Button type="submit">SHOW ME THE MONEY!</Button>
           {this.state.tax ? (
             <Fragment>
-              <Paragraph>You pay £{this.state.tax} a year in tax</Paragraph>
               <Paragraph>
-                And you are in the {this.state.bracket} tax bracket
+                You pay <strong>£{this.state.tax}</strong> a year in tax
+              </Paragraph>
+              <Paragraph>
+                as you are in the <strong>{this.state.bracket}</strong> tax
+                bracket
               </Paragraph>
             </Fragment>
           ) : null}
         </Form>
-        <Paragraph>How does it work?</Paragraph>
+        <Breakdown>Break it down!</Breakdown>
         <Tilt>
-          <Chevron src="chevron.svg" />
+          <a href="#info">
+            <Chevron src="chevron.svg" />
+          </a>
         </Tilt>
       </Container>
     );

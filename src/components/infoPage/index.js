@@ -1,12 +1,22 @@
 import React from 'react';
-import { Container, Subheader, Table, Heading } from './index.styles';
+import {
+  Container,
+  Subheader,
+  Paragraph,
+  Table,
+  Heading,
+} from './index.styles';
 import TaxTable from './TaxTable';
 import taxInfo from '../../utils/tax-info';
 
 const InfoPage = () => {
   return (
-    <Container>
-      <Subheader>BREAK IT DOWN</Subheader>
+    <Container id="info">
+      <Subheader>
+        Income tax is calculated according to where your salary sits within
+        these bands.
+      </Subheader>
+      <Paragraph>So the more you earn, the more you give.</Paragraph>
       <Table>
         <tbody>
           <tr>

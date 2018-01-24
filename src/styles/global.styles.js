@@ -11,6 +11,7 @@ injectGlobal`
   }
   body {
    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-   background-color: palevioletred;
+   background-color: #fcfcfc;
+   color: #b50e5c;
   }
 `;

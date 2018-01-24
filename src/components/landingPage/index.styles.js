@@ -12,6 +12,7 @@ export const Header = styled.h1`
   margin: 0.5em 0;
   font-size: 5em;
   font-style: italic;
+  border-bottom: 10px solid #0f0e0b;
 `;
 
 export const Subheader = styled.h2`
