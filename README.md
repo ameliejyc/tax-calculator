@@ -14,7 +14,7 @@ Then install dependencies:
 
 `npm i`
 
-Then calculate your income tax to your heart's content:
+Then calculate income tax to your heart's content:
 
 `npm start`
 

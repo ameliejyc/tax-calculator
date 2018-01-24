@@ -6,7 +6,7 @@ const LandingPage = () => {
   return (
     <Container>
       <Header>
-        INCOME TAX IS COOL{' '}
+        INCOME TAX IS COOL
         <span role="img" aria-label="cool emoji">
           😎
         </span>
@@ -18,12 +18,12 @@ const LandingPage = () => {
         more.
       </Subheader>
       <Subheader>
-        Use this salary calculator to find out how much income tax you're
-        contributing through how much you earn.
+        Use this income tax calculator to find out how much you're contributing
+        through how much you earn.
       </Subheader>
       <Tilt>
         <a href="#calculator">
-          <Chevron src="chevron.svg" />
+          <Chevron alt="down arrow" src="chevron.svg" />
         </a>
       </Tilt>
     </Container>

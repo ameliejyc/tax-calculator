@@ -100,7 +100,7 @@ class CalculatorPage extends Component {
         <Breakdown>Break it down!</Breakdown>
         <Tilt>
           <a href="#info">
-            <Chevron src="chevron.svg" />
+            <Chevron alt="down arrow" src="chevron.svg" />
           </a>
         </Tilt>
       </Container>
